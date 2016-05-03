@@ -1,16 +1,15 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿
 
 public class Earth : Matter {
-    public double Percent {
+    public override double Percent {
         get {
-            return RessourceDensity.EarthPercent;
+            return MapSettings.EarthPercent;
         }
     }
 
-    public int AverageQuantity {
+    public override int AverageQuantity {
         get {
-            return RessourceDensity.EarthAverageQuantity;
+            return MapSettings.EarthAverageQuantity;
         }
     }
 }

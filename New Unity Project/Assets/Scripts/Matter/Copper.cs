@@ -1,16 +1,15 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿
 
 public class Copper : Matter {
-    public double Percent {
+    public override double Percent {
         get {
-            return RessourceDensity.CopperPercent;
+            return MapSettings.CopperPercent;
         }
     }
 
-    public int AverageQuantity {
+    public override int AverageQuantity {
         get {
-            return RessourceDensity.CopperAverageQuantity;
+            return MapSettings.CopperAverageQuantity;
         }
     }
 }

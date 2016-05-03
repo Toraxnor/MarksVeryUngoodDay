@@ -11,10 +11,10 @@ public class MacWalkingStone : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         if(Input.GetKey("a"))
-            this.transform.position += Vector3.left * Time.deltaTime;
+            this.transform.position += 3 * Vector3.left * Time.deltaTime;
         if (Input.GetKey("d"))
-            this.transform.position += Vector3.right * Time.deltaTime;
-        if (Input.GetKeyDown("w"))
-            this.transform.position += Vector3.up * Time.deltaTime * 1000;
+            this.transform.position += 3 * Vector3.right * Time.deltaTime;
+        if (Input.GetKeyDown("w") || Input.GetKeyDown("space"))
+            GetComponent<Rigidbody2D>().AddForce(new Vector3(0, 30, 0), ForceMode2D.Impulse);
     }
 }
